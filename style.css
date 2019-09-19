@@ -82,7 +82,7 @@ a:hover {
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     border-radius: 3px;
-    background: url(content/2.jpg);
+    background: url(2.jpg);
     background-size: cover;
     background-position: center 35%;
     box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
