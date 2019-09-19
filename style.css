@@ -84,9 +84,9 @@ a:hover {
     border-radius: 3px;
     background: url(2.jpg);
     background-size: cover;
+    filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, .2));
     background-position: center 35%;
     box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
-    filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, .2));
     animation: onLoad .2s ease-in;
 }
 
