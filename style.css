@@ -1,13 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400|Roboto:300,400&display=swap');
 
 body,
 html {
     font-family: Raleway, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0;
     padding: 0;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400|Roboto:300,400&display=swap');
 
 @font-face {
     font-family: Lucca;
@@ -63,21 +62,20 @@ a:hover {
     height: 2px;
     border-radius: 2px;
     background: #fff;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+    -webkit-transition-duration: .6s;
+         -o-transition-duration: .6s;
+            transition-duration: .6s;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
 }
 
 .header li a:hover:after,
 .header li a.active:after {
     left: 20%;
     width: 60%;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
+    -webkit-transition-duration: .6s;
+         -o-transition-duration: .6s;
+            transition-duration: .6s;
 }
 
 .bg {
@@ -90,20 +88,38 @@ a:hover {
     border-radius: 3px;
     background: url(2.jpg);
     background-size: cover;
-    filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, .2));
     background-position: center 35%;
-    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+    -webkit-filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, .2));
+    filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, .2));
+    -webkit-animation: onLoad .2s ease-in;
     animation: onLoad .2s ease-in;
+}
+
+@-webkit-keyframes onLoad {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.98, .98, .98);
+                transform: scale3d(.98, .98, .98);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
 }
 
 @keyframes onLoad {
     from {
         opacity: 0;
-        transform: scale3d(.98, .98, .98);
+        -webkit-transform: scale3d(.98, .98, .98);
+                transform: scale3d(.98, .98, .98);
     }
     to {
         opacity: 1;
-        transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
     }
 }
 
@@ -150,12 +166,14 @@ a.logo {
     .header li a.active:after {
         bottom: 1px;
     }
-    @media screen and (max-width:490px) {
-        .header {
-            width: calc(100% - 40px);
-            padding: 0;
-        }
-        .header ul li {
-            display: block;
-        }
+}
+
+@media screen and (max-width:490px) {
+    .header {
+        width: calc(100% - 40px);
+        padding: 0;
     }
+    .header ul li {
+        display: block;
+    }
+}
