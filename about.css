@@ -60,6 +60,9 @@ a:hover {
     height: 2px;
     border-radius: 2px;
     background: #fff;
+    -webkit-transition: .2s ease-in;
+    -moz-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
     transition: .2s ease-in;
 }
 
@@ -79,6 +82,9 @@ a:hover {
     border-radius: 3px;
     filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, .2));
     animation: onLoad .2s ease-in;
+    -webkit-transition: .2s ease-in;
+    -moz-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
     transition: .2s ease-in;
 }
 
@@ -90,6 +96,9 @@ a:hover {
     background-size: cover;
     background-position: center 65%;
     box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+    -webkit-transition: .2s ease-in;
+    -moz-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
     transition: .2s ease-in;
 }
 
@@ -115,6 +124,9 @@ a.logo {
     background-position: left center;
     background-size: auto 44px;
     mix-blend-mode: overlay;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
     opacity: 1;
 }
@@ -162,7 +174,10 @@ a.logo {
         transform: rotate(90deg);
         background: rgba(125, 152, 151, .3);
         border-radius: 30px;
-        transition: .2s ease-in;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
         z-index: 10;
         filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, .2));
         -webkit-backdrop-filter: blur(5px);
@@ -180,7 +195,10 @@ a.logo {
         left: calc(50% - 60px);
         width: 150px;
         height: 120px;
-        transition: .2s ease-in;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
         opacity: 0;
     }
     .mobile_header.active {
