@@ -13,22 +13,40 @@ $(document).ready(function() {
     });
 });
 
-(function($) {
-    $.fn.parlx = function(options) {
-        var options = $.extend({
-            speed: 0.08
-        }, options);
-        return this.each(function() {
-            const backImage = $(this);
-            let speed = options.speed;
-            if (speed > 0.5 || speed < 0.1) {
-                speed = 0.08;
+
+$(document).ready(function() {
+    var scrolled = $(window).scrollTop()
+    $('.prx').each(function(index) {
+        var initY = $(this).offset().top
+        var height = $(this).height()
+        var diff = scrolled - initY
+        var ratio = Math.round((diff / height) * 100.0)
+        $(this).css('background-position', 'center calc(65% + ' + parseFloat(-(ratio * .1)) + 'px)')
+    })
+    $(window).scroll(function() {
+        var scrolled = $(window).scrollTop()
+        $('.prx').each(function(index, element) {
+            var initY = $(this).offset().top
+            var height = $(this).height()
+            var endY = initY + $(this).height()
+
+            var visible = isInViewport(this)
+            if (visible) {
+                var diff = scrolled - initY
+                var ratio = Math.round((diff / height) * 100)
+                $(this).css('background-position', 'center calc(65% + ' + parseFloat(-(ratio * .1)) + 'px)')
             }
-            const scrolled = $(window).scrollTop() - backImage.parent().offset().top;
-            backImage.css({ "background-position": "center calc(60% - " + speed * scrolled + "px)" });
-        });
-    }
-    $(window).on("load resize scroll", function() {
-        $('.prx').parlx();
-    });
-})(jQuery);
+        })
+    })
+})
+
+function isInViewport(node) {
+    var rect = node.getBoundingClientRect()
+    return (
+        (rect.height > 0 || rect.width > 0) &&
+        rect.bottom >= 0 &&
+        rect.right >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+}
