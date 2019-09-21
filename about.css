@@ -137,13 +137,41 @@ a.logo {
 .hamburger, .current {
     display: none;
 }
+#instafeed {
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 720px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    -webkit-animation: onLoad .2s ease-in;
+    animation: onLoad .2s ease-in;
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in;
+}
+a.ig_image{
+    margin: 10px;
+    padding-top: calc(100% - 20px);
+    background: rgba(207, 205, 200, 1);
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
+}
 @media screen and (max-width:768px) {
-    .bg {
+    .bg{
         margin: 20px;
         width: calc(100% - 40px);
     }
+    #instafeed {
+        width: calc(100% - 20px);
+    }
 }
 @media screen and (max-width:600px) {
+    #instafeed {
+    grid-template-columns: auto auto;
+    }
     .box {
         height: 200px;
     }
