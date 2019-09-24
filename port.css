@@ -102,26 +102,22 @@ a.type .title{
     background-position: center center!important;
 }
 .type.portraits{
-    background-color: rgba(217, 209, 182,1);
-    background: url(content/1.jpg);
+    background: rgba(217, 209, 182,1) url(content/1.jpg);
     background-size: cover;
     background-position: center center;
 }
 .type.events{
-    background-color: rgba(196, 209, 180,1);
-    background: url(content/16.jpg);
+    background: rgba(196, 209, 180,1) url(content/16.jpg);
     background-size: cover;
     background-position: center center;
 }
 .type.landscape{
-    background-color: rgba(186, 213, 217,1);
-    background: url(content/30.jpg);
+    background: rgba(186, 213, 217,1) url(content/30.jpg);
     background-size: cover;
     background-position: center center;
 }
 .type.other{
-    background-color: rgba(219, 199, 186,1);
-    background: url(content/40.jpg);
+    background: rgba(219, 199, 186,1) url(content/40.jpg);
     background-size: cover;
     background-position: center center;
 }
