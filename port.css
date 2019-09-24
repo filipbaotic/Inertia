@@ -155,22 +155,17 @@ txt{
     animation: onLoad .4s ease-in;
 }
 .img{
-    width: calc(25% - 20px);
-    margin: 8px;
+    width: calc(33.3333% - 20px);
+    margin: 10px;
     overflow: hidden;
     display: inline-block;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-transition: .6s ease-in;
-    -o-transition: .6s ease-in;
-    transition: .6s ease-in;
+    position: relative;
 }
 .img img{
     width: 100%;
     height: auto;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .kind{
         position: relative;
         width: calc(100% - 30px);
@@ -181,9 +176,6 @@ txt{
     }
 }
 @media screen and (max-width:768px) {
-    .gallery {
-        width: calc(100% - 20px);
-    }
 
 .kind:before{
     content: '';
@@ -206,6 +198,12 @@ txt{
     background:-o-linear-gradient(left, rgba(255,255,255,0) , white);
     background:linear-gradient(to right, rgba(255,255,255,0) , white);
 }
+.img{
+    width: calc(50% - 20px);
 }
-@media screen and (max-width:500px) {
+}
+@media screen and (max-width:450px) {
+.img{
+    width: calc(100% - 20px);
+}
 }
