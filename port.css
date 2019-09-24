@@ -72,6 +72,7 @@ a:hover {
     content: '';
     position: fixed;
     top: 0; left: 0;
+    z-index: 100;
     width: 10px; height: 85px;
     background:-webkit-gradient(linear, left top, right top, from(white), to(rgba(255,255,255,0)) );
     background:-o-linear-gradient(left, white, rgba(255,255,255,0) );
@@ -81,6 +82,7 @@ a:hover {
     content: '';
     position: fixed;
     top: 0; right: 0;
+    z-index: 100;
     width: 10px; height: 85px;
     background:-webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)) , to(white));
     background:-o-linear-gradient(left, rgba(255,255,255,0) , white);
