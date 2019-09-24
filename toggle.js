@@ -520,8 +520,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var elem = document.querySelector('.gallery');
     var msnry = new Masonry(elem, {
-        itemSelector: '.img',
-        containerStyle: { position: 'absolute' }
+        itemSelector: '.img'
     });
 
 });
