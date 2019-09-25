@@ -49,9 +49,6 @@ a:hover {
     z-index: 99;
     width: calc(100% - 10px);
     padding: 5px;
-    -webkit-transition: .2s ease-in;
-    -o-transition: .2s ease-in;
-    transition: .2s ease-in;
     background: rgba(255,255,255, .7);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
@@ -62,7 +59,7 @@ a:hover {
 	overflow-x: scroll;
 	-webkit-overflow-scrolling: touch;
     width: 697px;
-    height: 75px;
+    height: 65px;
     -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
             filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
 }
@@ -72,13 +69,10 @@ a.type{
     overflow: hidden;
     display: inline-block;
     border-radius: 3px;
-    -webkit-transition: .6s ease-in;
-    -o-transition: .6s ease-in;
-    transition: .6s ease-in;
 }
 a.type .title{
     width: 100%;
-    padding: 10px 0;
+    padding: 5px 0;
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
@@ -91,22 +85,22 @@ a.type .title{
     background-position: center center!important;
 }
 .type.portraits{
-    background: rgba(217, 209, 182,1) url(content/1.jpg);
+    background: rgba(217, 209, 182,1) url(ccontent/1.jpg);
     background-size: cover;
     background-position: center center;
 }
 .type.events{
-    background: rgba(196, 209, 180,1) url(content/16.jpg);
+    background: rgba(196, 209, 180,1) url(ccontent/16.jpg);
     background-size: cover;
     background-position: center center;
 }
 .type.landscape{
-    background: rgba(186, 213, 217,1) url(content/30.jpg);
+    background: rgba(186, 213, 217,1) url(ccontent/30.jpg);
     background-size: cover;
     background-position: center center;
 }
 .type.other{
-    background: rgba(219, 199, 186,1) url(content/40.jpg);
+    background: rgba(219, 199, 186,1) url(ccontent/40.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -135,7 +129,7 @@ txt{
 .back{
     position: relative;
     width: calc(100% - 40px);
-    margin: 105px 20px 20px 20px;
+    margin: 95px 20px 20px 20px;
 }
 .back a{
     font-family: Roboto;
@@ -148,22 +142,22 @@ txt{
     margin-top: -10px;
     margin-bottom: 10px;
     width: calc(100% - 20px);
-    -webkit-transition: .2s ease-in;
-    -o-transition: .2s ease-in;
-    transition: .2s ease-in;
     -webkit-animation: onLoad .4s ease-in;
     animation: onLoad .4s ease-in;
 }
-.img{
-    width: calc(33.3333% - 20px);
-    margin: 10px;
-    overflow: hidden;
-    display: inline-block;
+.gallery .pic{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
     position: relative;
+    width: calc(100% - 20px);
 }
-.img img{
-    width: 100%;
-    height: auto;
+.pic img{
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+    max-height: 600px;
+    vertical-align: middle;
 }
 @media screen and (min-width:769px) {
     .kind{
@@ -182,7 +176,7 @@ txt{
     position: fixed;
     top: 0; left: 0;
     z-index: 100;
-    width: 10px; height: 85px;
+    width: 10px; height: 75px;
     background:-webkit-gradient(linear, left top, right top, from(white), to(rgba(255,255,255,0)) );
     background:-o-linear-gradient(left, white, rgba(255,255,255,0) );
     background:linear-gradient(to right, white, rgba(255,255,255,0) );
@@ -193,17 +187,9 @@ txt{
     position: fixed;
     top: 0; right: 0;
     z-index: 100;
-    width: 10px; height: 85px;
+    width: 10px; height: 75px;
     background:-webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)) , to(white));
     background:-o-linear-gradient(left, rgba(255,255,255,0) , white);
     background:linear-gradient(to right, rgba(255,255,255,0) , white);
-}
-.img{
-    width: calc(50% - 20px);
-}
-}
-@media screen and (max-width:450px) {
-.img{
-    width: calc(100% - 20px);
 }
 }
