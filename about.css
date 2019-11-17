@@ -69,12 +69,24 @@ a:hover {
     overflow: hidden;
     width: 700px;
     background: rgba(125, 152, 151, .5);
-    border-radius: 3px;
+    border-radius: 5px;
     -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
             box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
     -webkit-transition: .2s ease-in;
     -o-transition: .2s ease-in;
     transition: .2s ease-in;
+}
+#profile {
+    margin: auto;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    width: 700px;
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in;
+    -webkit-animation: onLoad .4s ease-in;
+    animation: onLoad .4s ease-in;
 }
 .bg:first-of-type {
     margin-top: 20px;
@@ -137,7 +149,7 @@ a.logo {
 }
 #instafeed {
     margin: auto;
-    margin-top: -10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
     width: 720px;
@@ -153,7 +165,7 @@ a.ig_image{
     margin: 10px;
     padding-top: calc(100% - 20px);
     background: rgba(207, 205, 200, 1);
-    border-radius: 3px;
+    border-radius: 5px;
     -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
     box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
 }
@@ -174,7 +186,7 @@ a.ig_image{
 a.type{
     margin: 10px;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 5px;
     -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
     box-shadow: 2px 7px 20px rgba(0, 0, 0, .2);
     -webkit-transition: .6s ease-in;
@@ -201,8 +213,18 @@ a.type .title{
     background-size: cover;
     background-position: center center;
 }
-.type.events{
+.type.weddings{
     background: url(content/16.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.type.baptism{
+    background: url(content/baptism.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.type.work{
+    background: url(content/work.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -225,7 +247,7 @@ txt{
     content: '';
     position: absolute;
     height: 2px;
-    border-radius: 2px;
+    border-radius: 5px;
     background: #fff;
     left: 50%;
     width: 0px;
@@ -239,7 +261,7 @@ txt{
     width: 50px;
 }
 @media screen and (max-width:768px) {
-    .bg{
+    .bg, #profile{
         margin: 20px;
         width: calc(100% - 40px);
     }
@@ -353,35 +375,13 @@ txt{
     }
 }
 .profile-box {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    margin-bottom: 63px;
-    background: url(content/29.jpg);
-    background-size: cover;
-    background-position: center bottom;
-    -webkit-box-shadow: inset 0px 0px 30px 10px rgba(0, 0, 0, 0.25);
-    box-shadow: inset 0px 0px 30px 10px rgba(0, 0, 0, 0.25);
-    -webkit-transition: .2s ease-in;
-    -o-transition: .2s ease-in;
-    transition: .2s ease-in;
+    text-align: center;
+    padding-bottom: 20px;
 }
 .profile-box img {
-    position: absolute;
-    bottom: -63px;
-    left: calc(50% - 63px);
-    width: 120px;
-    height: 120px;
-    border: 3px solid rgba(197, 219, 227, 1);
-    border-radius: 120px;
-    -webkit-box-shadow: 0px -3px 3px rgba(0, 0, 0, .3);
-    box-shadow: 0px -3px 3px rgba(0, 0, 0, .3);
+    width: 80px; height: 80px;
+    border-radius: 80px;
 }
-#profile {
-    background: rgba(197, 219, 227, 1);
-    -webkit-animation: onLoad .4s ease-in;
-    animation: onLoad .4s ease-in;
-}
-.about-me {
-    padding: 20px;
+.about-me{
+    text-align: center;
 }
