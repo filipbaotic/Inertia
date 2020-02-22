@@ -8,7 +8,9 @@ html {
     padding: 0;
 }
 *{
-    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
 }
 @media screen and (min-width:601px){
 body, html{
@@ -22,7 +24,6 @@ body, html{
     font-family: Lucca;
     src: url(Lucca-Regular.otf);
 }
-
 a {
     color: rgba(125, 152, 151, 1);
     text-decoration: none;
@@ -36,12 +37,10 @@ a:hover {
     src: url(SF-Pro-Display-Medium.otf);
     font-weight: Medium;
 }
-
 @font-face {
     font-family: SFProText-Semibold;
     src: url(SF-Pro-Display-Semibold.otf);
 }
-
 @-webkit-keyframes onLoad {
     from {
         opacity: 0;
@@ -58,7 +57,6 @@ a:hover {
         opacity: 1;
     }
 }
-
 a.logo{
     position: fixed;
     top: 0px;
@@ -75,15 +73,19 @@ a.logo{
     z-index: 1000;
     margin: 12.5px 0;
 }
-
 .kind {
     position: fixed;
     top: 0px; 
-    right: 20px;
+    right: 0px;
     height: 50px;
+    padding: 0 20px;
+    width: calc(100% - 40px);
     text-align: right;
     z-index: 99;
     line-height: 50px;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(7px) saturate(70%);
+    -webkit-backdrop-filter: blur(7px) saturate(70%);
     /* 
     position: fixed;
     top: calc(50vh - 22px);
@@ -100,7 +102,6 @@ a.logo{
     z-index: 99;
     */
 }
-
 a.type{
     font-family: SFProText-Semibold;
     font-size: 20px;
@@ -109,31 +110,24 @@ a.type{
     margin: auto;
     display: inline-block;
 }
-
 .type.portraits{
     color: rgba(217, 209, 182,1);
 }
-
 .type.weddings{
     color: rgba(196, 209, 180,1);
 }
-
 .type.baptism{
     color: rgba(204, 197, 194,1);
 }
-
 .type.press{
     color: rgba(196, 209, 240,1);
 }
-
 .type.landscape{
     color: rgba(186, 213, 217,1);
 }
-
 .type.other{
     color: rgba(219, 199, 186,1);
 }
-
 .gallery{
     position: relative;
     height: calc(100% - 70px);
@@ -143,20 +137,16 @@ a.type{
     -webkit-animation: onLoad .4s ease-in;
     animation: onLoad .4s ease-in;
 }
-
 .gallery .pic{
     padding: 10px;
     display: inline-block;
 }
-
 .pic:first-child{
     padding-left: 20px;
 }
-
 .pic:last-child{
     padding-right: 20px;
 }
-
 .pic img{
     position: relative;
     margin: auto;
@@ -164,13 +154,14 @@ a.type{
     width: auto;
     pointer-events: none;
 }
-
 @media screen and (max-width:600px){
 
 a.logo{
     top: 5px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     }
 
 .kind {
@@ -183,6 +174,7 @@ a.logo{
     line-height: 22px;
     background: rgba(255,255,255,.85);
     backdrop-filter: blur(7px) saturate(70%);
+    -webkit-backdrop-filter: blur(7px) saturate(70%);
 }
 
 .gallery{
