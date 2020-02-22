@@ -2,10 +2,13 @@
 body,
 html {
     font-family: Raleway, sans-serif;
-    background: #111;
+    background: #ffffff;
     font-size: 15px;
     margin: 0;
     padding: 0;
+}
+*{
+    transition-duration: .2s;
 }
 @media screen and (min-width:601px){
 body, html{
@@ -19,6 +22,7 @@ body, html{
     font-family: Lucca;
     src: url(Lucca-Regular.otf);
 }
+
 a {
     color: rgba(125, 152, 151, 1);
     text-decoration: none;
@@ -32,10 +36,12 @@ a:hover {
     src: url(SF-Pro-Display-Medium.otf);
     font-weight: Medium;
 }
+
 @font-face {
     font-family: SFProText-Semibold;
     src: url(SF-Pro-Display-Semibold.otf);
 }
+
 @-webkit-keyframes onLoad {
     from {
         opacity: 0;
@@ -52,89 +58,131 @@ a:hover {
         opacity: 1;
     }
 }
+
 a.logo{
     position: fixed;
-    top: 20px;
+    top: 0px;
+    left: 20px;
+    /*
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background: url(white.png);
+    transform: translateX(-50%);
+    */
+    background: url(black.png);
     background-size: 117px 25px;
     width: 117px;
     height: 25px;
-    margin: 5px 0;
     display: inline-block;
     z-index: 1000;
+    margin: 12.5px 0;
 }
+
 .kind {
     position: fixed;
-    bottom: 10px; 
-    right: 10px;
+    top: 0px; 
+    right: 20px;
+    height: 50px;
     text-align: right;
-    max-width: calc(100% - 20px);
     z-index: 99;
+    line-height: 50px;
+    /* 
+    position: fixed;
+    top: calc(50vh - 22px);
+    left: calc(-50vh + 22px);
+    padding: 10px 20px;
+    text-align: left;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: calc(100vh - 40px);
+    background: rgba(255,255,255, .9);
+    -webkit-backdrop-filter: blur(14px) saturate(80%);
+    backdrop-filter: blur(14px) saturate(80%);
+    z-index: 99;
+    */
 }
+
 a.type{
     font-family: SFProText-Semibold;
-    font-size: 25px;
+    font-size: 20px;
     color: rgba(0, 0, 0, 1);
     letter-spacing: -1px;
-    line-height: 25px;
     margin: auto;
     display: inline-block;
 }
+
 .type.portraits{
     color: rgba(217, 209, 182,1);
 }
+
 .type.weddings{
     color: rgba(196, 209, 180,1);
 }
+
 .type.baptism{
     color: rgba(204, 197, 194,1);
 }
-.type.work{
+
+.type.press{
     color: rgba(196, 209, 240,1);
 }
+
 .type.landscape{
     color: rgba(186, 213, 217,1);
 }
+
 .type.other{
     color: rgba(219, 199, 186,1);
 }
+
 .gallery{
     position: relative;
-    height: calc(100% - 110px);
-    margin-top: 55px;
-    margin-bottom: 45px;
+    height: calc(100% - 70px);
+    margin-top: 40px;
+    margin-bottom: 20px;
     text-align: center;
     -webkit-animation: onLoad .4s ease-in;
     animation: onLoad .4s ease-in;
 }
+
 .gallery .pic{
     padding: 10px;
     display: inline-block;
 }
+
 .pic:first-child{
     padding-left: 20px;
 }
+
 .pic:last-child{
     padding-right: 20px;
 }
+
 .pic img{
     position: relative;
     margin: auto;
     height: 100%;
     width: auto;
+    pointer-events: none;
 }
+
 @media screen and (max-width:600px){
+
+a.logo{
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+
 .kind {
-    position: static;
-    margin-left: 10px;
-    margin-top: 65px;
+    position: fixed;
     width: calc(100% - 20px);
+    left: 0px;
+    padding: 50px 10px 5px 10px;
+    height: auto;
     text-align: center;
-    z-index: 99;
+    line-height: 22px;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(7px) saturate(70%);
 }
 
 .gallery{
@@ -143,6 +191,7 @@ a.type{
     width: calc(100% - 20px);
     padding: 0 10px;
     margin: auto;
+    margin-top: 100px;
     margin-bottom: 10px;
     text-align: center;
     -webkit-animation: onLoad .4s ease-in;
@@ -165,4 +214,30 @@ a.type{
     width: 100%;
     height: auto;
 }
+
 }
+/*
+.gallery{
+    margin: auto;
+    margin-top: 65px;
+    margin-bottom: 10px;
+    text-align: center;
+    -webkit-animation: onLoad .4s ease-in;
+    animation: onLoad .4s ease-in;
+}
+
+.gallery .pic{
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.pic img{
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+    max-height: 550px;
+    vertical-align: middle;
+}
+*/
