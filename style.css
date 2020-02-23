@@ -1,18 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400|Roboto:300,400&display=swap');
-
 body,
 html{
-    font-family: Raleway, sans-serif;
+    font-family: SFProText-Light;
     font-size: 15px;
     margin: 0;
     padding: 0;
-    -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
-            box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
 }
 
 @font-face {
     font-family: Lucca;
     src: url(Lucca-Regular.otf);
+}
+
+@font-face {
+    font-family: SFProText-Light;
+    src: url(SF-Pro-Display-Light.otf);
+}
+
+@font-face {
+    font-family: SFProText-Medium;
+    src: url(SF-Pro-Display-Medium.otf);
+}
+
+@font-face {
+    font-family: SFProText-Semibold;
+    src: url(SF-Pro-Display-Semibold.otf);
 }
 
 a {
@@ -81,88 +92,85 @@ a:hover {
 }
 
 .bg {
-    position: relative;
+    position: fixed;
     top: 20px;
     left: 20px;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
     border-radius: 5px;
     background: url(content/2.jpg);
     background-size: cover;
     background-position: center 35%;
     -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
      box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
-    -webkit-animation: onLoad .2s ease-in;
-    animation: onLoad .2s ease-in;
+    -webkit-animation-duration: .1s;
+            animation-duration: .1s;
+    -webkit-transition-timing-function: ease-in;
+         -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 
-.shadows{
-}
-
-@-webkit-keyframes onLoad {
-    from {
-        opacity: 0;
-        -webkit-transform: scale3d(.98, .98, .98);
-                transform: scale3d(.98, .98, .98);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-    }
-}
-
-@keyframes onLoad {
-    from {
-        opacity: 0;
-        -webkit-transform: scale3d(.98, .98, .98);
-                transform: scale3d(.98, .98, .98);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-    }
-}
-
-.stamp {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 70px;
-    height: 70px;
-    background: url(icon.png);
-    background-position: center;
-    background-size: 80px 80px;
-}
+.byebye {
+    -webkit-animation-name: byebye;
+            animation-name: byebye;
+  }
 
 a.logo {
     position: relative;
-    top: 17px;
-    left: 17px;
-    width: 209px;
-    height: 48px;
+    top: 20px;
+    left: calc(50% - 82px);
+    width: 164px;
+    height: 35px;
     display: block;
     background: url(white.png) no-repeat;
     background-position: left center;
-    background-size: auto 44px;
-    mix-blend-mode: overlay;
+    background-size: auto 35px;
+}
+
+@media screen and (min-width:739px) {
+@-webkit-keyframes byebye {
+    from {
+    width: calc(100vw - 40px);
+    }
+    to {
+    width: calc(50vw - 30px);
+    }
+}
+@keyframes byebye {
+    from {
+    width: calc(100vw - 40px);
+    }
+    to {
+    width: calc(50vw - 30px);
+    }
+}
+}
+
+@media screen and (max-width:740px) {
+@-webkit-keyframes byebye {
+    from {
+        height: calc(100vh - 40px);
+    }
+    to {
+        height: 50vh;
+    }
+}
+@keyframes byebye {
+    from {
+        height: calc(100vh - 40px);
+    }
+    to {
+        height: 50vh;
+    }
+}
 }
 
 @media screen and (max-width:600px) {
-    .stamp {
-        display: none;
-    }
     .header {
         width: calc(100% - 190px);
         padding: 0 75px;
-    }
-    a.logo {
-        left: 0;
-        width: calc(100% - 40px);
-        background-position: top center;
-        top: 20px;
-        margin: auto;
     }
     .header li a:after,
     .header li a.active:after {
