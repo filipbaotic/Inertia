@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width,  initial-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="icon.png" rel="shortcut icon">
+    <script>
+        function runThis() {
+        $('.bg').addClass('byebye').delay(1500);
+    }
+
+    $(window).on('beforeunload', function() {
+        runThis();
+    });
+        
 
 </head>
 
@@ -14,7 +23,6 @@
     <div class="bg">
 
     <a href="/Inertia/" class="logo"></a>
-    <div class="stamp"></div>
     <div class="header">
         <ul>
             <li><a href="/Inertia/about.html">About</a></li>
